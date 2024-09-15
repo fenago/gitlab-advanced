@@ -448,12 +448,12 @@ docker run --rm -it -v gitlab-runner-config:/etc/gitlab-runner gitlab/gitlab-run
 1. **Important!** Make sure to create new project inside the group so that you can use the runner:
 ![](./images/29.png)
 
-2. Disable shared runners for all the projects that you create. Otherwise, gitlab will fail your pipeline and ask for account verification.
+2. Disable instance runners for all the projects that you create. Otherwise, gitlab will fail your pipeline and ask for account verification.
 
 3. On the left sidebar, select `Settings` > `CI/CD`.
 ![](./images/30.png)
 
-4. Expand `Runners` and disable shared runners for this project.
+4. Expand `Runners` and disable instance runners for this project.
 ![](./images/31.png)
 
 5. Scroll to `Group runners` and confirm one runner is available.
@@ -483,7 +483,7 @@ To create and run your first pipeline:
 
 1.  Ensure you have runners available to run your jobs.
 
-    **Important!** Disable shared runners for all the projects that you create. Otherwise, gitlab will fail your pipeline and ask for account verification.
+    **Important!** Disable instance runners for all the projects that you create. Otherwise, gitlab will fail your pipeline and ask for account verification.
 
 2.  Create a `.gitlab-ci.yml` file at the root of your repository. This file is where you define the CI/CD jobs.
 

@@ -38,7 +38,7 @@ directory with `index.html` and
 
 **Important!** 
 
-1) shared runners for the project that you created. Otherwise, gitlab will fail your pipeline and ask for account verification.
+1) Disable instance runners for the project that you created. Otherwise, gitlab will fail your pipeline and ask for account verification.
 2) Make sure that default branch name is `main` for the newly created project. Otherwise, use correct default branch name in `.gitlab-ci.yml` .
 
 # Create and add SSH keys
