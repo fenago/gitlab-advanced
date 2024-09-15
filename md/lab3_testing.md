@@ -1,5 +1,4 @@
-Lab: Comprehensive Testing  
---------------------------
+## Lab 3: Comprehensive Testing
 
 This lab walks you through configuring a progressively more complex CI/CD pipeline through small, iterative steps. The pipeline is always fully functional, but it gains more functionality with each step. The goal is to build, test, and deploy a documentation site.
 

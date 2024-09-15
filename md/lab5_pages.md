@@ -1,4 +1,4 @@
-# Lab: Create a GitLab Pages website from scratc
+## Lab 5: Advanced GitLab Features  
 
 
 This lab shows you how to create a Pages site from scratch using

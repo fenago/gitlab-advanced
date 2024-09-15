@@ -1,12 +1,11 @@
  
-## Lab: Advanced GitLab CI/CD Techniques  
+## Lab 1: Advanced GitLab CI/CD Techniques  
 
 In this lab, we will create Gitlab account, run Gitlab runner instance locally and create and run GitLab CI/CD pipeline.
 
-### Lab: Using SSH keys with GitLab private repositories
+### Task: Using SSH keys with GitLab private repositories
 
-This lab is going to teach you a little bit about how Git works. It
-walks you through the steps of creating your own project, editing a
+This task walks you through the steps of creating your own project, editing a
 file, and committing changes to a Git repository from the command line.
 
 When you're done, you'll have a project where you can practice using
@@ -381,7 +380,7 @@ We can run github runners locally. In this lab, we will register gitlab-runner o
 
 **NOTE:** Make sure to open new terminal and connect with your remote VM before running docker commands below:
 
-`ssh ubuntu@YOUR_VM_DNS_NAME.courseware.io`
+`ssh ubuntu@YOUR_VM_DNS_NAME
 
 **Password:** Will be provided by Instructor.
 
@@ -463,7 +462,7 @@ docker run --rm -it -v gitlab-runner-config:/etc/gitlab-runner gitlab/gitlab-run
 **Important!** You will need to disable shared runner for all gitlab projects.
 
 
-## Lab: Create and run GitLab CI/CD pipeline
+## Task: Create and run GitLab CI/CD pipeline
 
 This lab shows you how to configure and run your first CI/CD pipeline in GitLab.
 

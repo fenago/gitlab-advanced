@@ -1,4 +1,4 @@
-# GitLab CI Pipeline. Deployment via SSH to Remote Server
+## Lab 4: Secure and Optimize Workflows  
 
 When you think about deploying to remote server, SSH is first network
 protocol which comes to your mind. Adding on top GitLab CI/CD will let
@@ -58,7 +58,7 @@ GitLab recommendation is to create SSH key type ED25519, which is more secure th
 
 **NOTE:** Make sure to open new terminal and connect with your remote VM as shown below before creating SSH keys:
 
-`ssh ubuntu@YOUR_VM_DNS_NAME.courseware.io`
+`ssh ubuntu@YOUR_VM_DNS_NAME`
 
 ![Create SSH key ed25519](./images/19.png)
 
@@ -104,7 +104,7 @@ private key in value field. Click `Add Variable`.
 Add two more variables:
 
 -   `SSH_USER` --- name of the user on the remote server: **ubuntu**
--   `VM_IPADDRESS` --- IP address of remote server i-e: **YOUR_VM_DNS_NAME.courseware.io**
+-   `VM_IPADDRESS` --- IP address of remote server i-e: **YOUR_VM_DNS_NAME**
 
 ![Added variables](./images/added_variables.png)
 

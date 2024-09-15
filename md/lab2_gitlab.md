@@ -1,5 +1,8 @@
-Lab : Gitlab Branches
-----------------------
+## Lab 2: Collaborative Development 
+
+In this lab, we will look into Gitlab branches and anaging merge requests.
+
+**Gitlab Branches**
 
 Fork is a duplicate of your original repository in which you can make
 the changes without affecting the original project.
@@ -69,14 +72,14 @@ the *Repository* section and click on the *Delete* button next to branch name.
 ![GitLab Create Branch](./images/delete-branch2.jpg)
 
 
-## Lab: Managing Merge Requests
+## Task: Managing Merge Requests
 
 There are many different ways to create a merge request.
 
 
 ### Task: Make changes in Gitlab Repo
 
-1. Switch to `example-tutorial-branch` in terminal of repo created in lab 3.
+1. Switch to `example-tutorial-branch` in terminal of repo created in `lab 1`.
 2.  Make changes in `README.md` and push the changes.
 
     ![](./images/5.jpg)
@@ -224,7 +227,7 @@ machine.
 4.  Copy the link and paste it in your browser.
 
 
-### Lab: Managing Merge Conflicts
+### Task: Managing Merge Conflicts
 
 *Merge conflicts* happen when the two branches in a merge request (the
 source and target) each have different changes, and you must decide
