@@ -25,13 +25,15 @@ To complete this lab, you will:
 
 Before adding the pipeline configuration, you must first set up a Docusaurus project on GitLab.com:
 
-1. Create a new project under your username (not a group):
+1. Create a new project under your group (which has runner running):
     - On the left sidebar, at the top, select **Create new (+)** and New **project/repository**.
     - Select **Create blank project**.
     - Enter the project details:
         * In the **Project** name field, enter the name of your project, for example **My Pipeline Testing Project**.
         * Select Initialize repository with a README.
     - Select Create project.
+
+![](./images/t1.jpg)
 
 2. On the project’s overview page, in the upper-right corner, select **Code** to find the clone paths for your project. Copy the SSH or HTTP path and use the path to clone the project locally.
 
@@ -57,7 +59,7 @@ mv website/* .
 rm -r website
 ```
 
-Update the Docusaurus configuration file with the details of your GitLab project. In docusaurus.config.js:
+Update the Docusaurus configuration file with the details of your GitLab project. In `docusaurus.config.js`:
 
 - Set `url`: to a path with this format: `https://<my-username>.gitlab.io/`.
 - Set `baseUrl`: to your project name, like `/my-pipeline-testing-project/`.
@@ -84,6 +86,8 @@ This step introduces:
 - `Jobs`: These are self-contained parts of a pipeline that run your commands. Jobs run on runners, separate from the GitLab instance.
 
 - `script`: This section of a job’s configuration is where you define the commands for jobs. If there are multiple commands (in an array), they run in order. Each command executes as if it was run as a CLI command. By default, if a command fails or returns an error, the job is flagged as failed and no more commands run.
+
+**Note:** Make sure to disable shared runner first.
 
 In this step, create a .gitlab-ci.yml file in the root of the project with this configuration:
 
@@ -177,6 +181,10 @@ pages:
       - "public/"
 ```
 
+![](./images/t2.jpg)
+
+![](./images/t3.jpg)
+
 Use the pipeline editor to commit this pipeline configuration to the default branch, and view the pipeline details from the Pipelines list. Verify that:
 
 - The two jobs run in different stages, `build` and `deploy`.
@@ -185,8 +193,20 @@ Use the pipeline editor to commit this pipeline configuration to the default bra
 To view your site:
 
 - On the left sidebar, select **Deploy** > **Pages**.
-- Make sure **Use unique domain** is off.
+- **Important:** Make sure **Use unique domain** is off.
+![](./images/t4.jpg)
+
 - Under **Access pages**, select the link. The URL format should be similar to: `https://<my-username>.gitlab.io/<project-name>`.
+![](./images/t5.jpg)
+
+**Note**
+If you are unable to view the deployed site, do following steps:
+
+- In **docusaurus.config.js**. Set `url` to a path with this format: `https://UPDATE_GROUP_ID.gitlab.io/`. You can get the group name from create project screen:
+![](./images/t7.jpg)
+
+- Update and push the code and run the complete pipeline again.
+
 
 
 **Add test jobs**
@@ -260,6 +280,8 @@ pages:
 
 
 Commit this pipeline configuration to the default branch, and view the pipeline details.
+
+![](./images/t6.jpg)
 
 - The lint-markdown job fails because the sample Markdown violates the default markdownlint rules, but is allowed to fail. You can:
     * Ignore the violations for now. They do not need to be fixed as part of the lab.

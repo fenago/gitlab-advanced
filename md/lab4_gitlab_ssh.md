@@ -106,6 +106,8 @@ Add two more variables:
 -   `SSH_USER` --- name of the user on the remote server: **ubuntu**
 -   `VM_IPADDRESS` --- IP address of remote server i-e: **YOUR_VM_DNS_NAME**
 
+**Note:** Don't add http/https etc in `VM_IPADDRESS`. Use your lab environment DNS name.
+
 ![Added variables](./images/added_variables.png)
 
 

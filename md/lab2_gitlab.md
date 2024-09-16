@@ -45,7 +45,7 @@ creation of branch involves following steps.
 ![GitLab Create Branch](./images/remove-user-1.jpg)
 
 **Step 2** − To create a branch, click on the *Branches* option under
-the *Repository* section and click on the *New branch* button.
+the *Code* section and click on the *New branch* button.
 
 ![GitLab Create Branch](./images/create-branch.jpg)
 
@@ -347,8 +347,8 @@ editor to resolve complex conflicts in the GitLab interface:
 
 
 
-Resolve Merge Conflict Locally
-===============================
+### Resolve Merge Conflict Locally
+
 
 In this section, we will work on resolving merge conflicts.
 

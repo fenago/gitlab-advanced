@@ -207,7 +207,7 @@ After you have completed the preceding steps, deploy your website:
 
 1.  Save and commit the `.gitlab-ci.yml` file.
 
-2.  Go to **CI/CD \> Pipelines** to watch the pipeline.
+2.  Go to **Build \> Pipelines** to watch the pipeline.
 
 3.  When the pipeline is finished, go to **Settings \> Pages** to find
     the link to your Pages website.

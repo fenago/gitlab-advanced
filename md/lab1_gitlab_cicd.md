@@ -78,7 +78,7 @@ cat ~/.ssh/id_ed25519.pub
 ```
 
 2. Sign in to GitLab.
-3. On the top bar, in the upper-right corner, select your avatar.
+3. On the top bar, select your avatar.
 4. Select **Preferences**.
 5. On the left sidebar, select SSH Keys.
 6. In the Key box, paste the contents of your public key. If you manually copied the key, make sure you copy the entire key, which starts with `ssh-ed25519` and may end with a comment.
@@ -115,7 +115,7 @@ Run the `ssh -T git@gitlab.com` command again. You should receive a Welcome to G
 **View your account’s SSH keys**
 
 1. Sign in to GitLab.
-2. On the top bar, in the upper-right corner, select your avatar.
+2. On the top bar, select your avatar.
 3. Select Preferences.
 4. On the left sidebar, select SSH Keys.
 Your existing SSH keys are listed at the bottom of the page. The information includes:
@@ -296,7 +296,15 @@ record those changes by making your first commit.
     git commit -m "I added text to the README file"
     ```
     
-    
+    If the user's email and name are not yet configured in Git, follow these steps:
+
+    - Replace the placeholders with your actual email address and name.
+    - Run the following commands:
+
+    ``` 
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+    ```   
 
 4.  The change has been committed to your branch, but your branch and
     its commits are still only available on your computer. No one else
@@ -305,7 +313,6 @@ record those changes by making your first commit.
     ``` 
     git push origin example-tutorial-branch
     ```
-    
     
 
 Your branch is now available on GitLab and visible to other users in
@@ -412,11 +419,18 @@ docker run -d --name gitlab-runner --restart always \
 
   **Note:** If you don't have one, click `New Group` to create new one.
 
-2. On the left sidebar, select `CI/CD` > `Runners`.
+2. On the left sidebar, select `Build` > `Runners`.
 ![](./images/24.png)
 
-3. In the upper-right corner, select `Register a group runner` and copy **Registration token** from the next steps .
+3. In the upper-right corner, select `New group runner`.
 ![](./images/25.png)
+
+4. Check **Run untagged jobs**, add **Runner description** and create `New Runner`.
+![](./images/25_1.png)
+
+5. **Important:** Make sure to copy the token from the UI for next step (You will get different new token).
+
+![](./images/25_2.png)
 
 
 ### Register a Runner
@@ -429,16 +443,13 @@ docker run --rm -it -v gitlab-runner-config:/etc/gitlab-runner gitlab/gitlab-run
 
 2. Enter your GitLab instance URL (also known as the gitlab-ci coordinator URL):
     `https://gitlab.com/`
-
 3. Enter the token you obtained to register the runner.
-4. Enter a description for the runner. You can change this value later in the GitLab user interface.
-5. Enter the tags associated with the runner, separated by commas. You can change this value later in the GitLab user interface.
-6. Enter any optional maintenance note for the runner.
-7. Provide the runner executor: enter **docker**.
-8. If you entered docker as your executor, you are asked for the default image to be used for projects that do not define one in .gitlab-ci.yml: enter **ruby:2.7**
+4. Enter a name for the runner
+5. Provide the runner executor: enter **docker**.
+6. If you entered docker as your executor, you are asked for the default image to be used for projects that do not define one in .gitlab-ci.yml: enter **ruby:2.7**
 ![](./images/27.png)
 
-9. Reload the webpage, you should see one runner available.
+7. Open/Reload the runners webpage, you should see one runner available.
 ![](./images/28.png)
 
 
@@ -577,7 +588,7 @@ The pipeline starts and runs the jobs you defined in the
 
 Now take a look at your pipeline and the jobs within.
 
-1.  Go to **CI/CD \> Pipelines**. A pipeline with three stages should be
+1.  Go to **Build \> Pipelines**. A pipeline with three stages should be
     displayed:
 
     [![Three
