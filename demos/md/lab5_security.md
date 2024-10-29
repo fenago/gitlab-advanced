@@ -1,4 +1,4 @@
-## Lab: Security Best Practices
+## Lab 5: Security Best Practices
 
 ### Overview
 

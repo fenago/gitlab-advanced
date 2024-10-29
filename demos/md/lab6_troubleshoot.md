@@ -1,4 +1,4 @@
-## Lab 5: Troubleshooting Pipelines and Job Failures
+## Lab 6: Troubleshooting Pipelines and Job Failures
 
 ### Overview
 
