@@ -92,7 +92,7 @@ cat ~/.ssh/id_ed25519.pub
 
 Verify that your SSH key was added correctly.
 
-Open a terminal and run this command, replacing gitlab.com with your GitLab instance URL:
+Open a terminal and run this command:
 
 `ssh -T git@gitlab.com`
 
