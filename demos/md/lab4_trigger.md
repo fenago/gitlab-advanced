@@ -140,7 +140,7 @@ build_job:
 trigger_downstream:
   stage: trigger_tests
   trigger:
-    project: "your-username/downstream-project"
+    project: "your-group/your-downstream-project"
     branch: "main"
   rules:
     - changes:
